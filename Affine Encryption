@@ -1,0 +1,47 @@
+include<stdio.h>
+#include<string.h>
+# define MAX_EL 100
+char ostr[MAX_EL]={0};
+int main()
+{
+        int x,a,b,i;
+        char c[MAX_EL]={0};
+        printf("Enter a,b values\n");
+        scanf("%d%d",&a,&b);
+        //check for gcd(a,b);
+        printf("Enter a string\n");
+        if (getchar())
+        {gets(c);}
+        printf("The String is:%s\n",c);
+        for(i=0;i<strlen(c);i++)
+{
+        {int x=c[i];
+                if(x>=97 && x<=123)
+                        {
+
+                        printf("ascii val:%d\n",x);
+                        calc(x,a,b,i);
+                        }
+                else
+                        {
+                        ostr[i]=c[i];
+                        }
+        }
+}
+puts(ostr);
+
+}
+int calc(int x, int a, int b,int i)
+{
+        int cipher;
+         cipher=((a*x)+b) % 26;
+        printf("Calculated value is:%d\n",cipher);
+        if(cipher<97)
+        {
+                cipher=cipher+96;
+        }
+        printf("The values are:%d %d %d\n",a,x,b);
+        printf("The encrpted output is:%d %c\n",cipher,cipher);
+        ostr[i]=cipher;
+}
+                      
